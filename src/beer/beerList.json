@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Green beer",
+        "category": "IPA",
+        "alco": "10%",
+        "strength": "6.7",
+        "manufacturer": "Sabotage",
+        "country": "Russia"
+    },
+    {
+        "id": "2",
+        "name": "Blue beer",
+        "category": "IPA",
+        "alco": "11%",
+        "strength": "6.5",
+        "manufacturer": "Sabotage",
+        "country": "Russia"
+    },
+    {
+        "id": "3",
+        "name": "Red beer",
+        "category": "Стаут",
+        "alco": "0%",
+        "strength": "67",
+        "manufacturer": "CHBD",
+        "country": "Italy"
+    },
+    {
+        "id": "4",
+        "name": "Black beer",
+        "category": "Стаут",
+        "alco": "110%",
+        "strength": "0.7",
+        "manufacturer": "Frog",
+        "country": "France"
+    }
+]
