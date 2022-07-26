@@ -41,6 +41,7 @@ export default function Menu() {
       dataSource={data}
       renderItem={item => <List.Item style={{justifyContent:"center"}}>{item}</List.Item>}
       /> */}
+      <Button name='Назад' linkName='../'></Button>
     </div>
     // </DefaultLayout>
   );

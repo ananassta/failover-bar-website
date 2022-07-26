@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import Menu from './Menu';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BeerList from './[BeerList]';
-import Beer from './[Beer]';
+// import { browserHistory } from "react-router";
+import BeerList from './BeerList';
+import Beer from './Beer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

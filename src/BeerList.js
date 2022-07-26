@@ -33,6 +33,7 @@ export default function BeerList(props) {
       dataSource={data}
       renderItem={item => <List.Item style={{justifyContent:"center"}}>{item}</List.Item>}
       /> */}
+      <Button name='Назад' linkName='../menu'></Button>
     </div>
     // </DefaultLayout>
   );

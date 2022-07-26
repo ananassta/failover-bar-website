@@ -1,6 +1,7 @@
 import Button from "./components/Button";
 import { getAllBeerInformation } from "./api";
 import { useLocation } from 'react-router-dom';
+// import { BrowserHistory } from "react-router";
 
 export default function Beer(props) {
     const location = useLocation();
@@ -16,7 +17,7 @@ export default function Beer(props) {
         <p key={idx}>{keyName}: {beerInformation[keyName]}</p>
       ))}
       </div>
-      {/* <Button name='Back' linkName='./'></Button> */}
+      <Button name='Назад' linkName='../menu/beer-list' data={beerInformation.category}></Button>
       {/* Нужно снова делать запрос или можно вернуться к результатам запроса */}
     </div>
   );
