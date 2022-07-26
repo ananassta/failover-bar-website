@@ -1,13 +1,18 @@
-import Button from "./components/Button";
+import ButtonMenu from "./components/ButtonMenu";
 import React from "react";
+import logoName from "./images/bar-logo-name.png";
+import "./components/style.css";
 
 function App() {
   return (
     <div className="App">
-      <image alt='bar logo name' src='./images/'/>
-      <Button name='Меню' linkName='/menu'/>
-      <Button name='О нас' linkName='./about_us'/>
-      <Button name='Контакты' linkName='./contacts'/>
+      <img alt='bar logo name' src={logoName} className="BarLogoName"/>
+      <p></p>
+      <div className="Menu">
+        <ButtonMenu name='Меню' linkName='/menu'/>
+        <ButtonMenu name='О нас' linkName='./about_us'/>
+        <ButtonMenu name='Контакты' linkName='./contacts'/>
+      </div>
     </div>
   );
 }

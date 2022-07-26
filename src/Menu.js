@@ -1,4 +1,4 @@
-import Button from "./components/Button";
+import ButtonMenu from "./components/ButtonMenu";
 import React from "react";
 import { getAllCategories } from "./api";
 
@@ -31,17 +31,17 @@ export default function Menu() {
       <p></p>
       <h1 style={{textAlign: "center"}}>List of all categories:</h1>
       <p></p>
-      <ul>
+      <div className="Menu">
       {allCategories.map((categ, idx) => (
-        <Button name={categ.title} linkName='./beer-list' key={idx} data={categ.title}></Button>
+        <ButtonMenu name={categ.title} linkName='./beer-list' key={idx} data={categ.title}></ButtonMenu>
       ))}
-      </ul>
       {/* <List 
       size="large"
       dataSource={data}
       renderItem={item => <List.Item style={{justifyContent:"center"}}>{item}</List.Item>}
       /> */}
-      <Button name='Назад' linkName='../'></Button>
+      <ButtonMenu name='Назад' linkName='../'></ButtonMenu>
+      </div>
     </div>
     // </DefaultLayout>
   );

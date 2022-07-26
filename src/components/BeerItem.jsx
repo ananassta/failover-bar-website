@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import ButtonMenu from "./ButtonMenu";
 import './style.css';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -21,7 +21,7 @@ const BeerItem = (props) => {
     ));
     return (
         <div>
-            <img alt="Beer image"></img>
+            <img alt="Beer image" src={fullInfo.image}></img>
             {Object.keys(shortInfo).map((keyName,idx) => (
                 <p key={idx}>{keyName}: {shortInfo[keyName]}</p>
             ))}

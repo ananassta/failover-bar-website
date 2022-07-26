@@ -11,7 +11,8 @@ export function getAllBeerInformation(beerId) {
                 alco: allBeersInOne[i].alco,
                 strength: allBeersInOne[i].strength,
                 manufacturer: allBeersInOne[i].manufacturer,
-                country: allBeersInOne[i].country
+                country: allBeersInOne[i].country,
+                image: allBeersInOne[i].image
             }
         }
     }
@@ -29,7 +30,8 @@ export function getAllBeersForCategory(category) {
                 slug: allBeersInOne[i].id,
                 name: allBeersInOne[i].name,
                 alco: allBeersInOne[i].alco,
-                strength: allBeersInOne[i].strength
+                strength: allBeersInOne[i].strength,
+                image: allBeersInOne[i].image
               });
         }
     //   if more than one category

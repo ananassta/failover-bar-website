@@ -1,4 +1,4 @@
-import Button from "./components/Button";
+import ButtonMenu from "./components/ButtonMenu";
 import { getAllBeersForCategory } from "./api";
 import { useLocation } from 'react-router-dom';
 import BeerListItem from "./components/BeerListItem";
@@ -38,7 +38,7 @@ export default function BeerList(props) {
       dataSource={data}
       renderItem={item => <List.Item style={{justifyContent:"center"}}>{item}</List.Item>}
       /> */}
-      <Button name='Назад' linkName='../menu'></Button>
+      <ButtonMenu name='Назад' linkName='../menu'></ButtonMenu>
     </div>
     // </DefaultLayout>
   );

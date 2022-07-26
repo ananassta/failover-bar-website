@@ -1,6 +1,32 @@
-* {
+body {
     background-color: #3C3C3B;
 }
+
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Raleway"), url(../fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+}
+
+.BarLogoName {
+    /* height: 200px; */
+    width: 200px;
+}
+
+.Menu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .ButtonMenu {
+    color: yellow;
+    background-color: violet;
+    border-color: green;
+} */
+
 
 
 /* table {

@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "./Button";
+import ButtonMenu from "./ButtonMenu";
 
 const BeerListItem = (props) => {
     const beer = props.beer;
     return (
         <div>
             <img alt="Beer image"></img>
-            <Button name={beer.name} linkName={"./beer"} data={beer.slug}></Button>
+            <ButtonMenu name={beer.name} linkName={"./beer"} data={beer.slug}></ButtonMenu>
             <p>{beer.alco} | {beer.strength}</p>
         </div>
     );

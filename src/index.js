@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BeerList from './BeerList';
 import Beer from './Beer';
 import './components/style.css';
+import './fonts/Raleway-VariableFont_wght.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

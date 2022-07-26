@@ -1,4 +1,4 @@
-import Button from "./components/Button";
+import Button from "./components/ButtonMenu";
 import { getAllBeerInformation } from "./api";
 import { useLocation } from 'react-router-dom';
 import BeerItem from "./components/BeerItem";
