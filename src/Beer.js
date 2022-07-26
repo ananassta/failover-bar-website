@@ -1,6 +1,7 @@
 import Button from "./components/Button";
 import { getAllBeerInformation } from "./api";
 import { useLocation } from 'react-router-dom';
+import BeerItem from "./components/BeerItem";
 // import { BrowserHistory } from "react-router";
 
 export default function Beer(props) {
@@ -9,14 +10,16 @@ export default function Beer(props) {
   return (
     <div>
       <p></p>
-      <h1 style={{textAlign: "center"}}> Information about beer &quot;{location.state.data}&quot;:</h1>
+      {/* <h1 style={{textAlign: "center"}}> Information about beer &quot;{location.state.data}&quot;:</h1> */}
+      <h1 style={{textAlign: "center"}}> Information about beer &quot;{beerInformation.name}&quot;:</h1>
       <p></p>
-      <div>
+      <BeerItem beer={beerInformation}></BeerItem>
+      {/* <div> */}
       {/* {beerInformation.map((categName,idx) => ( */}
-      {Object.keys(beerInformation).map((keyName,idx) =>(
+      {/* {Object.keys(beerInformation).map((keyName,idx) =>(
         <p key={idx}>{keyName}: {beerInformation[keyName]}</p>
-      ))}
-      </div>
+      ))} */}
+      {/* </div> */}
       <Button name='Назад' linkName='../menu/beer-list' data={beerInformation.category}></Button>
       {/* Нужно снова делать запрос или можно вернуться к результатам запроса */}
     </div>

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { browserHistory } from "react-router";
 import BeerList from './BeerList';
 import Beer from './Beer';
+import './components/style.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -5,7 +5,7 @@ export function getAllBeerInformation(beerId) {
     for (let i = 0; i < allBeersInOne.length; i++) {
         if (allBeersInOne[i].id === beerId) {
             return {
-                id: allBeersInOne[i].id,
+                // id: allBeersInOne[i].id,
                 name: allBeersInOne[i].name,
                 category: allBeersInOne[i].category,
                 alco: allBeersInOne[i].alco,
@@ -28,6 +28,8 @@ export function getAllBeersForCategory(category) {
               beers.push({
                 slug: allBeersInOne[i].id,
                 name: allBeersInOne[i].name,
+                alco: allBeersInOne[i].alco,
+                strength: allBeersInOne[i].strength
               });
         }
     //   if more than one category
@@ -43,32 +45,32 @@ export function getAllBeersForCategory(category) {
     return beers;
 }
 
-export function getAllCategoriesForCategory() {
-    const allBeersInOne = beerList;
-    // const allBeersInOne = await import("../beer/beerList.json");
-    let categories = [];
-    for (let i = 0; i < allBeersInOne.length; i++) {
-      const category = allBeersInOne[i].category;
-      if (categories.indexOf(category) === -1) {
-              categories.push(category);
-            }
-    //   if more than 1 category
-    //   for (let j = 0; j < category.length; j++) {
-    //     if (categories.indexOf(category[j]) === -1) {
-    //       categories.push(category[j]);
-    //     }
-    //   }
-    }
-    const categ = [];
-    categories = categories.sort();
-    for (let i = 0; i < categories.length; i++) {
-      categ.push({
-        category: categories[i],
-        title: categories[i],
-      });
-    }
-    return categ;
-}
+// export function getAllCategoriesForCategory() {
+//     const allBeersInOne = beerList;
+//     // const allBeersInOne = await import("../beer/beerList.json");
+//     let categories = [];
+//     for (let i = 0; i < allBeersInOne.length; i++) {
+//       const category = allBeersInOne[i].category;
+//       if (categories.indexOf(category) === -1) {
+//               categories.push(category);
+//             }
+//     //   if more than 1 category
+//     //   for (let j = 0; j < category.length; j++) {
+//     //     if (categories.indexOf(category[j]) === -1) {
+//     //       categories.push(category[j]);
+//     //     }
+//     //   }
+//     }
+//     const categ = [];
+//     categories = categories.sort();
+//     for (let i = 0; i < categories.length; i++) {
+//       categ.push({
+//         category: categories[i],
+//         title: categories[i],
+//       });
+//     }
+//     return categ;
+// }
 
 export function getAllCategories() {
     const allBeersInOne = beerList;

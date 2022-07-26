@@ -1,6 +1,7 @@
 import Button from "./components/Button";
-import { getAllBeersForCategory, getAllCategoriesForCategory } from "./api";
+import { getAllBeersForCategory } from "./api";
 import { useLocation } from 'react-router-dom';
+import BeerListItem from "./components/BeerListItem";
 
 export default function BeerList(props) {
     const location = useLocation();
@@ -23,8 +24,12 @@ export default function BeerList(props) {
       <div>
       {/* {props.beers.map((beer, idx) => ( */}
       {allBeers.map((beer,idx) => (
+        <BeerListItem beer={beer} key={idx}></BeerListItem>
         // <p>{beer.name}</p>
-        <Button name={beer.name} linkName={"./beer"} key={idx} data={beer.slug}></Button>
+        // <div key={idx}>
+        // <Button name={beer.name} linkName={"./beer"} data={beer.slug}></Button>
+        // <p>{beer.alco} | {beer.strength}</p>
+        // </div>
         // <Button name={beer.name} linkName={"/" + beer.slug} key={idx} data={beer.slug}></Button>
       ))}
       </div>

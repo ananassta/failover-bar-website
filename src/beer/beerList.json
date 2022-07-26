@@ -34,5 +34,23 @@
         "strength": "0.7",
         "manufacturer": "Frog",
         "country": "France"
+    },
+    {
+        "id": "5",
+        "name": "Fire beer",
+        "category": "Лагер",
+        "alco": "17%",
+        "strength": "2.7",
+        "manufacturer": "Frog",
+        "country": "France"
+    },
+    {
+        "id": "6",
+        "name": "Rose beer",
+        "category": "Эль",
+        "alco": "50%",
+        "strength": "0.75",
+        "manufacturer": "Horse",
+        "country": "Germany"
     }
 ]
