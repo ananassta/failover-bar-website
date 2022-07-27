@@ -20,6 +20,12 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "prefer-destructuring": ["error", {
+            "array": false,
+            "object": false
+          }, {
+            "enforceForRenamedProperties": false
+          }]
     }
 }

@@ -1,24 +1,25 @@
 body {
-    background-color: #3C3C3B;
+  background-color: #3c3c3b;
 }
 
 @font-face {
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Raleway"), url(../fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway'),
+    url(../fonts/Raleway-VariableFont_wght.ttf) format('truetype');
 }
 
 .BarLogoName {
-    /* height: 200px; */
-    width: 200px;
+  /* height: 200px; */
+  width: 200px;
 }
 
 .Menu {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* .ButtonMenu {
@@ -26,8 +27,6 @@ body {
     background-color: violet;
     border-color: green;
 } */
-
-
 
 /* table {
     width: 500px;

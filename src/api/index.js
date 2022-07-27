@@ -1,39 +1,39 @@
-import beerList from "../beer/beerList.json";
+import beerList from '../beer/beerList.json';
 
 export function getAllBeerInformation(beerId) {
-    const allBeersInOne = beerList;
-    for (let i = 0; i < allBeersInOne.length; i++) {
-        if (allBeersInOne[i].id === beerId) {
-            return {
-                // id: allBeersInOne[i].id,
-                name: allBeersInOne[i].name,
-                category: allBeersInOne[i].category,
-                alco: allBeersInOne[i].alco,
-                strength: allBeersInOne[i].strength,
-                manufacturer: allBeersInOne[i].manufacturer,
-                country: allBeersInOne[i].country,
-                image: allBeersInOne[i].image
-            }
-        }
+  const allBeersInOne = beerList;
+  for (let i = 0; i < allBeersInOne.length; i += 1) {
+    if (allBeersInOne[i].id === beerId) {
+      return {
+        // id: allBeersInOne[i].id,
+        name: allBeersInOne[i].name,
+        category: allBeersInOne[i].category,
+        alco: allBeersInOne[i].alco,
+        strength: allBeersInOne[i].strength,
+        manufacturer: allBeersInOne[i].manufacturer,
+        country: allBeersInOne[i].country,
+        image: allBeersInOne[i].image,
+      };
     }
-    return false
+  }
+  return false;
 }
 
 export function getAllBeersForCategory(category) {
-    const allBeersInOne = beerList;
-    // const allBeersInOne = await import("../beer/beerList.json");
-    const beers = [];
-    for (let i = 0; i < allBeersInOne.length; i++) {
-        const categ = allBeersInOne[i].category;
-        if (categ === category) {
-              beers.push({
-                slug: allBeersInOne[i].id,
-                name: allBeersInOne[i].name,
-                alco: allBeersInOne[i].alco,
-                strength: allBeersInOne[i].strength,
-                image: allBeersInOne[i].image
-              });
-        }
+  const allBeersInOne = beerList;
+  // const allBeersInOne = await import("../beer/beerList.json");
+  const beers = [];
+  for (let i = 0; i < allBeersInOne.length; i += 1) {
+    const categ = allBeersInOne[i].category;
+    if (categ === category) {
+      beers.push({
+        id: allBeersInOne[i].id,
+        name: allBeersInOne[i].name,
+        alco: allBeersInOne[i].alco,
+        strength: allBeersInOne[i].strength,
+        image: allBeersInOne[i].image,
+      });
+    }
     //   if more than one category
     //   for (let j = 0; j < categ.length; j++) {
     //     if (categ[j] === category) {
@@ -43,8 +43,8 @@ export function getAllBeersForCategory(category) {
     //       });
     //     }
     //   }
-    }
-    return beers;
+  }
+  return beers;
 }
 
 // export function getAllCategoriesForCategory() {
@@ -75,29 +75,30 @@ export function getAllBeersForCategory(category) {
 // }
 
 export function getAllCategories() {
-    const allBeersInOne = beerList;
-    // const allBeersInOne = import("../beer/beerList.json");
-    let categories = [];
-    for (let i = 0; i < allBeersInOne.length; i++) {
-        if (categories.indexOf(allBeersInOne[i].category) === -1) {
-                  categories.push(allBeersInOne[i].category);
-        }
-        // for more than one category
+  const allBeersInOne = beerList;
+  // const allBeersInOne = import("../beer/beerList.json");
+  let categories = [];
+  for (let i = 0; i < allBeersInOne.length; i += 1) {
+    if (categories.indexOf(allBeersInOne[i].category) === -1) {
+      categories.push(allBeersInOne[i].category);
+    }
+    // for more than one category
     //   const category = allBeersInOne[i].category;
     //   for (let j = 0; j < category.length; j++) {
     //     if (categories.indexOf(category[j]) === -1) {
     //       categories.push(category[j]);
     //     }
     //   }
-    }
-    const categ = [];
-    categories = categories.sort();
-    for (let i = 0; i < categories.length; i++) {
-      categ.push({
-        category: categories[i],
-        title: categories[i],
-      });
-    }
-    // console.log(categ)
-    return categ;
+  }
+  const categ = [];
+  categories = categories.sort();
+  for (let i = 0; i < categories.length; i += 1) {
+    categ.push({
+      id: i,
+      category: categories[i],
+      title: categories[i],
+    });
+  }
+  // console.log(categ)
+  return categ;
 }

@@ -1,46 +1,49 @@
-import ButtonMenu from "./components/ButtonMenu";
-import React from "react";
-import { getAllCategories } from "./api";
-
+import React from 'react';
+import ButtonMenu from './components/ButtonMenu';
+import { getAllCategories } from './api';
 
 export default function Menu() {
-    
-// const  newdata = beerList.map( (beer, idx) =>{
-//     return  (
-//       console.log(beer)
-    
-//     )
-//   }
-// )
-// console.log(beerList)
+  // const  newdata = beerList.map( (beer, idx) =>{
+  //     return  (
+  //       console.log(beer)
 
-    const allCategories = getAllCategories();
-    // console.log(allCategories)
-//   const data = props.categories.map(function (categ, idx) {
-//     return (
-//         <Button name={categ.title} linkName='./beer-list' key={idx}></Button>
-//     //   <Link href={"/categories/" + categ.category} key={idx}>
-//     //     <a className="link-a">{categ.title}</a>
-//     //   </Link>
-//     );
-//   })
+  //     )
+  //   }
+  // )
+  // console.log(beerList)
+
+  const allCategories = getAllCategories();
+  // console.log(allCategories)
+  //   const data = props.categories.map(function (categ, idx) {
+  //     return (
+  //         <Button name={categ.title} linkName='./beer-list' key={idx}></Button>
+  //     //   <Link href={"/categories/" + categ.category} key={idx}>
+  //     //     <a className="link-a">{categ.title}</a>
+  //     //   </Link>
+  //     );
+  //   })
   return (
     // <DefaultLayout title={props.title} description={props.description} page="categories">
     <div className="App">
-        {/* <p>hi</p> */}
-      <p></p>
-      <h1 style={{textAlign: "center"}}>List of all categories:</h1>
-      <p></p>
+      {/* <p>hi</p> */}
+      <p />
+      <h1 style={{ textAlign: 'center' }}>List of all categories:</h1>
+      <p />
       <div className="Menu">
-      {allCategories.map((categ, idx) => (
-        <ButtonMenu name={categ.title} linkName='./beer-list' key={idx} data={categ.title}></ButtonMenu>
-      ))}
-      {/* <List 
+        {allCategories.map((categ) => (
+          <ButtonMenu
+            name={categ.title}
+            linkName="./beer-list"
+            key={categ.id}
+            data={categ.title}
+          />
+        ))}
+        {/* <List
       size="large"
       dataSource={data}
       renderItem={item => <List.Item style={{justifyContent:"center"}}>{item}</List.Item>}
       /> */}
-      <ButtonMenu name='Назад' linkName='../'></ButtonMenu>
+        <ButtonMenu name="Назад" linkName="../" />
       </div>
     </div>
     // </DefaultLayout>
@@ -59,7 +62,6 @@ export default function Menu() {
 //     },
 //   };
 // }
-
 
 // function Menu(props) {
 //     return (
@@ -83,9 +85,10 @@ export default function Menu() {
 //     // <DefaultLayout title={props.title} description={props.description}>
 //     <div>
 //       <p></p>
-//       <h1 style={{textAlign: "center"}}>List of all beers for category &quot;{props.category}&quot;:</h1>
+//       <h1 style={{textAlign: "center"}}>
+//       List of all beers for category &quot;{props.category}&quot;:</h1>
 //       <p></p>
-//       <List 
+//       <List
 //       size="large"
 //       dataSource={data}
 //       renderItem={item => <List.Item style={{justifyContent:"center"}}>{item}</List.Item>}
@@ -100,13 +103,13 @@ export default function Menu() {
 //     return {
 //       props: {
 //         posts: await getAllPostsForCategory(context.params.category),
-//         category: context.params.category,  
+//         category: context.params.category,
 //         title: config.title,
 //         description: config.description,
 //       },
 //     };
 //   }
-  
+
 // export async function getStaticPaths() {
 //     let paths = await getAllCategoriesForCategory();
 //     paths = paths.map((categ) => ({
@@ -117,4 +120,3 @@ export default function Menu() {
 //       fallback: false,
 //     };
 //   }
-  

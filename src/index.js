@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Menu from './Menu';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { browserHistory } from "react-router";
 import BeerList from './BeerList';
 import Beer from './Beer';
@@ -18,10 +18,8 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="menu" element={<Menu />} />
-      <Route path='menu/beer-list' element={<BeerList />} />
-      <Route path='menu/beer-list/beer' element={<Beer />} />
+      <Route path="menu/beer-list" element={<BeerList />} />
+      <Route path="menu/beer-list/beer" element={<Beer />} />
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter>,
 );
-
-
