@@ -19,10 +19,12 @@ function BeerItem(props) {
   const fullInfo = {};
   Object.keys(beerInformation).forEach((keyName) => {
     //   for (let keyName of Object.keys(beerInformation)) {
-    if (['name', 'alco', 'strength'].includes(keyName)) {
-      shortInfo[keyName] = beerInformation[keyName];
-    } else {
-      fullInfo[keyName] = beerInformation[keyName];
+    if (keyName !== 'image') {
+      if (['name', 'alco', 'strength'].includes(keyName)) {
+        shortInfo[keyName] = beerInformation[keyName];
+      } else {
+        fullInfo[keyName] = beerInformation[keyName];
+      }
     }
   });
   //   Object.keys(beerInformation).map((keyName) =>
@@ -32,10 +34,10 @@ function BeerItem(props) {
   //   );
   return (
     <div>
-      <img alt="Beer" src={fullInfo.image} />
+      <img alt="Beer" src={beerInformation.image} />
       {Object.keys(shortInfo).map((keyName) => (
         <p key={keyName}>
-          {'{keyName}: {shortInfo[keyName]}'}
+          {`${keyName}: ${shortInfo[keyName]}`}
         </p>
       ))}
       <p>---</p>

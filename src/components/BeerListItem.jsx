@@ -13,7 +13,7 @@ function BeerListItem(props) {
         data={beer.id}
       />
       <p>
-        {'{beer.alco} | {beer.strength}'}
+        {`${beer.alco} | ${beer.strength}`}
       </p>
     </div>
   );

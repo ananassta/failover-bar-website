@@ -3,27 +3,15 @@ import { useLocation } from 'react-router-dom';
 import Button from './components/ButtonMenu';
 import { getAllBeerInformation } from './api';
 import BeerItem from './components/BeerItem';
-// import { BrowserHistory } from "react-router";
+import logoName from './images/bar-logo-name.png';
 
 export default function Beer() {
   const location = useLocation();
   const beerInformation = getAllBeerInformation(location.state.data);
   return (
-    <div>
-      <p />
-      {/* <h1 style={{textAlign: "center"}}>  */}
-      {/* Information about beer &quot;{location.state.data}&quot;:</h1> */}
-      <h1 style={{ textAlign: 'center' }}>
-        {'Information about beer &quot;{beerInformation.name}&quot;:'}
-      </h1>
-      <p />
+    <div className="Menu">
+      <img alt="bar-logo-name" src={logoName} className="BarLogoName" />
       <BeerItem beer={beerInformation} />
-      {/* <div> */}
-      {/* {beerInformation.map((categName,idx) => ( */}
-      {/* {Object.keys(beerInformation).map((keyName,idx) =>(
-        <p key={idx}>{keyName}: {beerInformation[keyName]}</p>
-      ))} */}
-      {/* </div> */}
       <Button
         name="Назад"
         linkName="../menu/beer-list"

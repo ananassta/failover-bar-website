@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonMenu from './components/ButtonMenu';
 import logoName from './images/bar-logo-name.png';
-import './components/style.css';
+// import './components/style.css';
 
 function App() {
   return (
