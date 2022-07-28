@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Button from './components/ButtonMenu';
+import ButtonBack from './components/ButtonBack';
 import { getAllBeerInformation } from './api';
 import BeerItem from './components/BeerItem';
 import logoName from './images/header.svg';
@@ -13,7 +13,7 @@ export default function Beer() {
     <div className="Menu">
       <img alt="bar-logo-name" src={logoName} className="BarLogoName" />
       <BeerItem beer={beerInformation} />
-      <Button
+      <ButtonBack
         name="Назад"
         linkName="../menu/beer-list"
         data={beerInformation.category}

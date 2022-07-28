@@ -24,11 +24,14 @@ function BeerItem(props) {
     if ((keyName !== 'image') && (keyName !== 'description')) {
       if (['name', 'alco', 'strength'].includes(keyName)) {
         shortInfo[keyName] = beerInformation[keyName];
+        // кажется, избыточно
       } else {
         fullInfo[keyName] = beerInformation[keyName];
       }
     }
   });
+  const shortDesc = `${fullInfo.manufacturer} (${fullInfo.country}) | ${shortInfo.alco} | ${shortInfo.strength}`;
+  // mb just change on beerInformation
   let beerImage = null;
   if (!beerInformation.image) {
     beerImage = beerSign;
@@ -43,14 +46,25 @@ function BeerItem(props) {
   //   );
   return (
     <div>
-      <img src={beerImage} alt="Beer" />
-      {Object.keys(shortInfo).map((keyName) => (
-        <p key={keyName}>
-          {`${keyName}: ${shortInfo[keyName]}`}
-        </p>
-      ))}
-      <p>
+      <div className="BeerItemBox">
+        <img src={beerImage} alt="Beer" className="BeerImage" />
+        <div className="BeerItemShortDecs">
+          <p className="BeerItemName">
+            {`${beerInformation.name}`}
+          </p>
+          {/* {Object.keys(shortInfo).map((keyName) => ( */}
+          {/* <p key={keyName}> */}
+          <p className="BeerItemShortDescText">
+            {`${shortDesc}`}
+          </p>
+          {/* ))} */}
+        </div>
+      </div>
+      <p className="BeerDescText">
         {`${beerInformation.description}`}
+      </p>
+      <p className="Price">
+        {`${beerInformation.price}₽`}
       </p>
       <TableContainer>
         <Table>
@@ -64,7 +78,7 @@ function BeerItem(props) {
                 <TableCell
                   sx={{ borderRight: '1px solid rgba(224,224,224,1)' }}
                 >
-                  {keyName}
+                  {keyName.charAt(0).toUpperCase() + keyName.slice(1)}
                 </TableCell>
                 <TableCell sx={{ borderLeft: '1px solid rgba(224,224,224,1)' }}>
                   {fullInfo[keyName]}

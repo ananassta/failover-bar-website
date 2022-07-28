@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonMenu from './components/ButtonMenu';
+import ButtonBack from './components/ButtonBack';
 import { getAllCategories } from './api';
 import logoName from './images/header.svg';
 
@@ -19,7 +20,7 @@ export default function Menu() {
             data={categ.title}
           />
         ))}
-        <ButtonMenu name="Назад" linkName="../" />
+        <ButtonBack name="Назад" linkName="../" />
       </div>
     </div>
     // </DefaultLayout>

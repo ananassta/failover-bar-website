@@ -11,8 +11,31 @@ body {
 }
 
 .BarLogoName {
-  /* height: 200px; */
-  width: 200px;
+  /* position: absolute; */
+  width: 180px;
+  height: 166px;
+  left: 37px;
+  top: 25px;
+  z-index: 2;
+}
+
+.LogoCircle {
+  position: absolute;
+  width: 759px;
+  height: 790px;
+  left: -29px;
+  top: -71px;
+  z-index: -10;
+}
+
+.BeerListImage {
+  width: 81px;
+  height: 82px;
+}
+
+.BeerImage {
+  width: 147px;
+  height: 173px;
 }
 
 .Menu {
@@ -21,6 +44,247 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.BeerListBox {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  gap: 20px;
+
+  /* position: absolute; */
+  width: 366px;
+  height: 104px;
+  left: 12px;
+  top: 160px;
+
+  border-radius: 32px;
+}
+
+.BeerShortDescBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  width: 217px;
+  height: 65px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.BeerShortDesc {
+  width: 217px;
+  height: 17px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+
+  letter-spacing: 0.4px;
+
+  color: #757575;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+
+.BeerItemBox {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  gap: 20px;
+
+  /* position: absolute; */
+  width: 366px;
+  height: 250px;
+  left: 12px;
+  top: 127px;
+
+  border-radius: 32px;
+}
+
+.BeerItemShortDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  width: 151px;
+  height: 147px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.BeerItemName {
+  width: 151px;
+  height: 88px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+
+  letter-spacing: 0.4px;
+
+  color: #D75C36;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.BeerItemShortDescText {
+  width: 151px;
+  height: 42px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+
+  letter-spacing: 0.4px;
+
+  color: #757575;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.BeerDescText {
+  width: 306px;
+  height: 154px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+
+  text-align: justify;
+  letter-spacing: 0.4px;
+
+  color: #EDEDED;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.Price {
+  position: absolute;
+  width: 64px;
+  height: 32px;
+  left: 284px;
+  top: 517px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 140%;
+  /* or 35px */
+
+  text-align: justify;
+  letter-spacing: 0.4px;
+
+  color: #D75C36;
+
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-1reyrvb-MuiTableCell-root {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  /* or 133% */
+
+  /* display: flex;
+  align-items: center; */
+  letter-spacing: -0.24px;
+  /* font-feature-settings: 'tnum' on, 'lnum' on; */
+
+  color: #EDEDED;
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-1w694cj-MuiTableCell-root {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 138% */
+
+  /* display: flex;
+  align-items: center; */
+  letter-spacing: -0.08px;
+
+  color: #EDEDED;
+}
+
+span.MuiButton-startIcon.MuiButton-iconSizeMedium.css-1d6wzja-MuiButton-startIcon {
+  margin-right: 0;
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1h0ykne-MuiButtonBase-root-MuiButton-root {
+  background-color: rgba(25, 118, 210, 0.0);
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1h0ykne-MuiButtonBase-root-MuiButton-root:hover {
+  color: #757575;
+}
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  font-size: 20px;
+  stroke: #EDEDED;
+  stroke-width: 1;
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1h0ykne-MuiButtonBase-root-MuiButton-root:hover svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  stroke: #757575;
+}
+
+/* .ButtonMenu {
+  background-color: #D75C36;
+  border-radius: 100px;
+  margin: 18px 16px;
+  width: 295px;
+  height: 50px;
+  gap: 10px;
+  box-shadow: 4px 8px 24px rgba(16, 16, 16, 0.25);
+  color: #EDEDED;
+  font-family: Raleway;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-transform: none;
+  border: 0;
+} */
 
 /* .ButtonMenu {
     color: yellow;
