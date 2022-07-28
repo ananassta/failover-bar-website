@@ -13,6 +13,7 @@ export function getAllBeerInformation(beerId) {
         manufacturer: allBeersInOne[i].manufacturer,
         country: allBeersInOne[i].country,
         image: allBeersInOne[i].image,
+        description: allBeersInOne[i].description,
       };
     }
   }
@@ -31,6 +32,7 @@ export function getAllBeersForCategory(category) {
         name: allBeersInOne[i].name,
         alco: allBeersInOne[i].alco,
         strength: allBeersInOne[i].strength,
+        manufacturer: allBeersInOne[i].manufacturer,
         image: allBeersInOne[i].image,
       });
     }

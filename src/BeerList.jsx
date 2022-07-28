@@ -3,7 +3,8 @@ import { useLocation } from 'react-router-dom';
 import ButtonMenu from './components/ButtonMenu';
 import { getAllBeersForCategory } from './api';
 import BeerListItem from './components/BeerListItem';
-import logoName from './images/bar-logo-name.png';
+import logoName from './images/header.svg';
+// import beerSign from './images/empty-beer-photo.svg';
 
 export default function BeerList() {
   const location = useLocation();

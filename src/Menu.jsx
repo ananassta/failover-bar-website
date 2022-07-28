@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonMenu from './components/ButtonMenu';
 import { getAllCategories } from './api';
-import logoName from './images/bar-logo-name.png';
+import logoName from './images/header.svg';
 
 export default function Menu() {
   const allCategories = getAllCategories();
