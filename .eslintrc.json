@@ -21,6 +21,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "comma-dangle": "off",
         "linebreak-style": "off",
         "prefer-destructuring": ["error", {
             "array": false,
