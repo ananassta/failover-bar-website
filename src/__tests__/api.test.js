@@ -1,5 +1,9 @@
 import beerList from '../beer/beerList.json';
-import { getAllBeerInformation, getAllBeersForCategory, getAllCategories } from './index';
+import {
+  getAllBeerInformation,
+  getAllBeersForCategory,
+  getAllCategories
+} from '../api';
 
 describe('Testing beer finding', () => {
   test('Beer finding by id', () => {
@@ -43,9 +47,9 @@ describe('Test getting all categories', () => {
   let checkAllCategories = [];
 
   beforeAll(() => {
-    allCategories = Array.from(new Set(beerList
-      .map((beer) => beer.category)))
-      .sort();
+    allCategories = Array.from(
+      new Set(beerList.map((beer) => beer.category))
+    ).sort();
     checkAllCategories = getAllCategories();
   });
 
