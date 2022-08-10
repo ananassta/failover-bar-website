@@ -1,5 +1,7 @@
 body {
   background-color: #3c3c3b;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
@@ -10,22 +12,22 @@ body {
     url(../fonts/Raleway-VariableFont_wght.ttf) format('truetype');
 }
 
-.BarLogoName {
-  /* position: absolute; */
-  width: 180px;
-  height: 166px;
-  left: 37px;
-  top: 25px;
-  z-index: 2;
-}
-
 .LogoCircle {
   position: absolute;
-  width: 759px;
-  height: 790px;
-  left: -29px;
-  top: -71px;
+  width: 50em;
+  height: 50em;
+  left: -14em;
+  top: -1em;
   z-index: -10;
+}
+
+.BarLogoName {
+  /* position: absolute; */
+  width: 15em;
+  height: 13em;
+  left: -350em;
+  top: 25em;
+  z-index: 2;
 }
 
 .BeerListImage {
@@ -39,10 +41,25 @@ body {
 }
 
 .Menu {
+  width: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
+}
+
+.Menu div {
+  margin: auto;
+  text-align: center;
+  /* align-self:flex-end;
+  width: 100%;
+  float:inherit;
+  text-align: center; */
+}
+
+.EmptyP {
+  height: 7em;
 }
 
 .BeerListBox {

@@ -26,6 +26,7 @@
             "object": false
           }, {
             "enforceForRenamedProperties": false
-          }]
+          }],
+        "react/jsx-filename-extension": "off"
     }
 }
