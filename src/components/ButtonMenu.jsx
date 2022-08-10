@@ -7,16 +7,20 @@ function ButtonMenu(props) {
   const buttonProps = props;
   const styleButton = {
     backgroundColor: '#D75C36',
-    borderRadius: '100px',
-    margin: '18px 16px',
-    width: '295px',
-    height: '50px',
-    gap: '10px',
-    boxShadow: '4px 8px 24px rgba(16, 16, 16, 0.25)',
+    borderRadius: '6.25em',
+    width: '18.5em',
+    height: '3.125em',
+    margin: '1.125em 1em',
+    gap: '0.625em',
+    // margin: '18px 16px',
+    // width: '295px',
+    // height: '50px',
+    // gap: '10px',
+    boxShadow: '0.25em 0.5em 1.5em rgba(16, 16, 16, 0.25)',
     color: '#EDEDED',
     fontFamily: 'Raleway',
-    fontSize: '16px',
-    letterSpacing: '0.2px',
+    fontSize: '1em',
+    letterSpacing: '0.013em',
     textTransform: 'none',
     border: '0',
     '&:hover': {
@@ -34,7 +38,7 @@ function ButtonMenu(props) {
   };
   return (
     <Link to={buttonProps.linkName} state={{ data: buttonProps.data }} style={styleText}>
-      <Button variant="outlined" size="medium" sx={styleButton}>
+      <Button variant="outlined" sx={styleButton}>
         {buttonProps.name}
       </Button>
     </Link>

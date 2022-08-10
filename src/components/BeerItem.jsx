@@ -45,9 +45,9 @@ function BeerItem(props) {
   //       : (fullInfo[keyName] = beerInformation[keyName])
   //   );
   return (
-    <div>
+    <div className="BeerItemBoxFull">
       <div className="BeerItemBox">
-        <img src={beerImage} alt="Beer" className="BeerImage" />
+        <img src={beerImage} alt="Beer" className="BeerImage" style={{ width: '9.188em', height: '10.813em' }} />
         <div className="BeerItemShortDecs">
           <p className="BeerItemName">
             {`${beerInformation.name}`}
@@ -63,9 +63,11 @@ function BeerItem(props) {
       <p className="BeerDescText">
         {`${beerInformation.description}`}
       </p>
-      <p className="Price">
-        {`${beerInformation.price}₽`}
-      </p>
+      <div className="PriceDiv">
+        <p className="Price">
+          {`${beerInformation.price}₽`}
+        </p>
+      </div>
       <TableContainer>
         <Table>
           {/* sx={{borderLeft: 0, borderRight: 0}} */}
@@ -76,11 +78,11 @@ function BeerItem(props) {
                 sx={{ '&:last-child td, &:last-child th': { borderBottom: 0 } }}
               >
                 <TableCell
-                  sx={{ borderRight: '1px solid rgba(224,224,224,1)' }}
+                  sx={{ borderRight: '0.063em solid rgba(117, 117, 117, 1)', width: '2em' }}
                 >
                   {keyName.charAt(0).toUpperCase() + keyName.slice(1)}
                 </TableCell>
-                <TableCell sx={{ borderLeft: '1px solid rgba(224,224,224,1)' }}>
+                <TableCell sx={{ borderLeft: '0.063em solid rgba(117, 117, 117, 1)' }}>
                   {fullInfo[keyName]}
                 </TableCell>
               </TableRow>

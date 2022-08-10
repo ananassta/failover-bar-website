@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2.375em;
+    width: 100%;
+}
+
+.back {
+    /* float: left; */
+    /* left: 2.5em;
+    position: absolute; */
+    margin-right: 3em;
+}
+
+.bar-logo-name-header {
+    width: 10.125em;
+    height: 3.438em;
+}

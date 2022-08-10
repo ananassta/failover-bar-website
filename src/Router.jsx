@@ -15,8 +15,8 @@ export function Router() {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="menu" element={<Menu />} />
-        <Route path="menu/beer-list" element={<BeerList />} />
-        <Route path="menu/beer-list/beer" element={<Beer />} />
+        <Route path="menu/:beerlist" element={<BeerList />} />
+        <Route path="menu/:beerlist/:beer" element={<Beer />} />
       </Routes>
     </BrowserRouter>
   );

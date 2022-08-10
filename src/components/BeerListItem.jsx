@@ -22,7 +22,7 @@ function BeerListItem(props) {
       <div className="BeerShortDescBox">
         <ButtonBeerName
           name={beer.name}
-          linkName="./beer"
+          linkName={`${beer.id}`}
           data={beer.id}
           value={inStock}
         />

@@ -1,7 +1,14 @@
+html, body {
+  overflow-x: hidden;
+}
 body {
   background-color: #3c3c3b;
   margin: 0;
   padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: default;
 }
 
 @font-face {
@@ -12,12 +19,37 @@ body {
     url(../fonts/Raleway-VariableFont_wght.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Urbanist'),
+    url(../fonts/Urbanist/Urbanist-VariableFont_wght.ttf) format('truetype');
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 1.25em;
+}
+
 .LogoCircle {
+  opacity: 0.25;
+  /* overflow-x: clip; */
   position: absolute;
-  width: 50em;
+  /* position: absolute; */
+  /* object-fit: cover; */
+  /* max-width: 100%; */
+  /* width: 150%; */
   height: 50em;
-  left: -14em;
-  top: -1em;
+  /* width: 50vh; */
+  /* height: 50em; */
+  /* left: -14em;
+  top: -1em; */
+  top: -4.5em;
+  left: -5em;
+  /* float: right; */
   z-index: -10;
 }
 
@@ -25,24 +57,27 @@ body {
   /* position: absolute; */
   width: 15em;
   height: 13em;
-  left: -350em;
-  top: 25em;
+  /* left: -350em;
+  top: 25em; */
+  margin-left: 1.5em;
   z-index: 2;
 }
 
 .BeerListImage {
-  width: 81px;
-  height: 82px;
+  width: 5.063em;
+  height: 5.125em;
 }
 
 .BeerImage {
-  width: 147px;
-  height: 173px;
+  width: 9.188em;
+  height: 10.813em;
 }
 
 .Menu {
+  /* position: absolute; */
   width: 100%;
   display: flex;
+  /* flex-direction: column; */
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -68,27 +103,29 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 24px;
-  gap: 20px;
+  /* justify-content: center; */
+  padding: 1.5em;
+  gap: 1.25em;
 
   /* position: absolute; */
-  width: 366px;
-  height: 104px;
-  left: 12px;
-  top: 160px;
+  width: 22.875em;
+  height: 6.5em;
+  left: 0.75em;
+  top: 10em;
 
-  border-radius: 32px;
+  border-radius: 2em;
 }
 
 .BeerShortDescBox {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  gap: 8px;
+  justify-content: center;
+  padding: 0em;
+  gap: 0.5em;
 
-  width: 217px;
-  height: 65px;
+  width: 13.563em;
+  height: 4.063em;
 
   flex: none;
   order: 1;
@@ -96,20 +133,22 @@ body {
 }
 
 .BeerShortDesc {
-  width: 217px;
-  height: 17px;
+  width: 13.563em;
+  height: 1.063em;
+  margin: 0em;
 
-  font-family: 'Raleway';
+  /* font-family: 'Raleway'; */
+  font-family: 'Urbanist';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75em;
   line-height: 140%;
 
-  letter-spacing: 0.4px;
+  letter-spacing: 0.025em;
 
   color: #757575;
 
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
 
   flex: none;
   order: 1;
@@ -117,34 +156,44 @@ body {
   flex-grow: 0;
 }
 
+.BeerItemBoxFull {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 2em; */
+  /* justify-content: center; */
+  align-items: center;
+}
 
 .BeerItemBox {
   box-sizing: border-box;
+  /* width: 100%; */
 
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 24px;
-  gap: 20px;
+  padding: 1.5em;
+  padding-top: 0em;
+  padding-right: 2.5em;
+  gap: 1.25em;
 
   /* position: absolute; */
-  width: 366px;
-  height: 250px;
-  left: 12px;
-  top: 127px;
+  /* width: 22.875; */
+  /* height: 15.625em; */
+  /* left: 0.75em;
+  top: 7.938em;
 
-  border-radius: 32px;
+  border-radius: 2em; */
 }
 
 .BeerItemShortDesc {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  gap: 8px;
+  padding: 0em;
+  gap: 0.5em;
 
-  width: 151px;
-  height: 147px;
+  /* width: 9.438em; */
+  /* height: 9.188em; */
 
   flex: none;
   order: 1;
@@ -152,16 +201,16 @@ body {
 }
 
 .BeerItemName {
-  width: 151px;
-  height: 88px;
+  /* width: 9.438em; */
+  /* height: 5.5em; */
 
-  font-family: 'Raleway';
-  font-style: normal;
+  /* font-family: 'Raleway'; */
+  font-family: 'Urbanist';
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.35em;
   line-height: 140%;
 
-  letter-spacing: 0.4px;
+  letter-spacing: 0.025em;
 
   color: #D75C36;
 
@@ -172,20 +221,21 @@ body {
 }
 
 .BeerItemShortDescText {
-  width: 151px;
-  height: 42px;
+  /* width: 9.438em; */
+  /* height: 2.625em; */
 
-  font-family: 'Raleway';
+  /* font-family: 'Raleway'; */
+  font-family: 'Urbanist';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.938em;
   line-height: 140%;
 
-  letter-spacing: 0.4px;
+  letter-spacing: 0.025em;
 
   color: #757575;
 
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
 
   flex: none;
   order: 1;
@@ -194,96 +244,158 @@ body {
 }
 
 .BeerDescText {
-  width: 306px;
-  height: 154px;
+  width: 19.125em;
+  /* height: 9.625em; */
+  margin: 0 2em;
 
-  font-family: 'Raleway';
+  /* font-family: 'Raleway'; */
+  font-family: 'Urbanist';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: 1em;
+  /* line-height: 140%; */
+  line-height: 1.4em;
 
   text-align: justify;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.025em;
 
   color: #EDEDED;
 
-  flex: none;
+  /* flex: none;
   order: 0;
-  flex-grow: 0;
+  flex-grow: 0; */
+}
+
+.PriceDiv {
+  display: flex;
+  flex-direction: row;
+  /* text-align: right; */
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .Price {
-  position: absolute;
-  width: 64px;
-  height: 32px;
-  left: 284px;
-  top: 517px;
+  /* position: absolute; */
+  /* width: 4em; */
+  /* width: 100%; */
+  /* text-align: right; */
+  /* height: 2em; */
+  /* left: 17.75em;
+  top: 32.313em; */
+  /* float: right; */
+  margin: 0;
+  margin-bottom: 0.5em;
+  margin-right: 1.5em;
 
-  font-family: 'Raleway';
+  /* font-family: 'Raleway'; */
+  font-family: 'Urbanist';
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.563em;
   line-height: 140%;
   /* or 35px */
 
   text-align: justify;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.025em;
 
   color: #D75C36;
 
 }
 
-td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-1reyrvb-MuiTableCell-root {
+.MuiTableContainer-root.css-rorn0c-MuiTableContainer-root {
+  width: 82.5%;
+  margin: 1.25em;
+  margin-top: 0em;
+  /* border-collapse: none; */
+}
+
+/* table.MuiTable-root{ 
+  width: 85%;
+  margin: 1.25em;
+  margin-top: 0em;
+} */
+
+/* td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-1reyrvb-MuiTableCell-root {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 0.938em;
+  line-height: 1.25em; */
   /* or 133% */
 
   /* display: flex;
   align-items: center; */
-  letter-spacing: -0.24px;
+  /* letter-spacing: -0.015em; */
   /* font-feature-settings: 'tnum' on, 'lnum' on; */
 
-  color: #EDEDED;
-}
+  /* color: #EDEDED;
+} */
 
-td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-1w694cj-MuiTableCell-root {
+/* td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-1w694cj-MuiTableCell-root {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813em;
+  line-height: 1.125em; */
   /* identical to box height, or 138% */
+  /* padding: 1em; */
 
   /* display: flex;
   align-items: center; */
-  letter-spacing: -0.08px;
+  /* letter-spacing: -0.005em;
 
   color: #EDEDED;
+} */
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
+  /* font-family: 'Raleway'; */
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.938em;
+  line-height: 1.25em;
+  letter-spacing: 0.025em;
+  color: #EDEDED;
+  border-bottom: 0.063em solid rgba(117, 117, 117, 1);
+  /* border-top: none; */
 }
 
-span.MuiButton-startIcon.MuiButton-iconSizeMedium.css-1d6wzja-MuiButton-startIcon {
+tr.MuiTableRow-root:last-child td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
+  border-bottom: 0;
+}
+
+
+/* td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.813em;
+  line-height: 1.125em;
+  letter-spacing: -0.005em;
+  color: #EDEDED;
+  border-bottom: 0.063em solid rgba(117, 117, 117, 1);
+} */
+
+span.MuiButton-startIcon.MuiButton-iconSizeMedium {
   margin-right: 0;
 }
 
-button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1h0ykne-MuiButtonBase-root-MuiButton-root {
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root {
   background-color: rgba(25, 118, 210, 0.0);
 }
 
-button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1h0ykne-MuiButtonBase-root-MuiButton-root:hover {
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root:hover {
   color: #757575;
 }
 
-svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
-  font-size: 20px;
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+  font-size: 1.25em;
   stroke: #EDEDED;
   stroke-width: 1;
 }
 
-button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1h0ykne-MuiButtonBase-root-MuiButton-root:hover svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root:hover svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
   stroke: #757575;
 }
 
