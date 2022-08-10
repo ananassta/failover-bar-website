@@ -7,9 +7,11 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 // import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+// import logo from '../images/beer1.png';
 // import Paper from '@mui/material/Paper';
 // import { borderLeft } from '@mui/system';
 // import { green } from '@mui/material/colors';
+import beerSign from '../images/empty-beer-photo.svg';
 
 function BeerItem(props) {
   const beerProps = props;
@@ -19,14 +21,24 @@ function BeerItem(props) {
   const fullInfo = {};
   Object.keys(beerInformation).forEach((keyName) => {
     //   for (let keyName of Object.keys(beerInformation)) {
-    if (keyName !== 'image') {
+    if ((keyName !== 'image') && (keyName !== 'description')) {
       if (['name', 'alco', 'strength'].includes(keyName)) {
         shortInfo[keyName] = beerInformation[keyName];
+        // кажется, избыточно
       } else {
         fullInfo[keyName] = beerInformation[keyName];
       }
     }
   });
+  const shortDesc = `${fullInfo.manufacturer} (${fullInfo.country}) | ${shortInfo.alco} | ${shortInfo.strength}`;
+  // mb just change on beerInformation
+  let beerImage = null;
+  if (!beerInformation.image) {
+    beerImage = beerSign;
+  } else {
+    beerImage = beerInformation.image;
+  }
+  // const beerImage = require(`${beerInformation.image}`);
   //   Object.keys(beerInformation).map((keyName) =>
   //     ['name', 'alco', 'strength'].includes(keyName)
   //       ? (shortInfo[keyName] = beerInformation[keyName])
@@ -34,13 +46,26 @@ function BeerItem(props) {
   //   );
   return (
     <div>
-      <img alt="Beer" src={beerInformation.image} />
-      {Object.keys(shortInfo).map((keyName) => (
-        <p key={keyName}>
-          {`${keyName}: ${shortInfo[keyName]}`}
-        </p>
-      ))}
-      <p>---</p>
+      <div className="BeerItemBox">
+        <img src={beerImage} alt="Beer" className="BeerImage" />
+        <div className="BeerItemShortDecs">
+          <p className="BeerItemName">
+            {`${beerInformation.name}`}
+          </p>
+          {/* {Object.keys(shortInfo).map((keyName) => ( */}
+          {/* <p key={keyName}> */}
+          <p className="BeerItemShortDescText">
+            {`${shortDesc}`}
+          </p>
+          {/* ))} */}
+        </div>
+      </div>
+      <p className="BeerDescText">
+        {`${beerInformation.description}`}
+      </p>
+      <p className="Price">
+        {`${beerInformation.price}₽`}
+      </p>
       <TableContainer>
         <Table>
           {/* sx={{borderLeft: 0, borderRight: 0}} */}
@@ -53,7 +78,7 @@ function BeerItem(props) {
                 <TableCell
                   sx={{ borderRight: '1px solid rgba(224,224,224,1)' }}
                 >
-                  {keyName}
+                  {keyName.charAt(0).toUpperCase() + keyName.slice(1)}
                 </TableCell>
                 <TableCell sx={{ borderLeft: '1px solid rgba(224,224,224,1)' }}>
                   {fullInfo[keyName]}

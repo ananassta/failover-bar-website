@@ -19,6 +19,15 @@ function ButtonMenu(props) {
     letterSpacing: '0.2px',
     textTransform: 'none',
     border: '0',
+    '&:hover': {
+      borderColor: '#D75C36',
+    },
+    '&:focus': {
+      borderColor: '#D75C36',
+    },
+    '&:active': {
+      borderColor: '#D75C36',
+    },
   };
   const styleText = {
     textDecoration: 'none',
