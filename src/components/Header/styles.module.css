@@ -17,3 +17,18 @@
     width: 10.125em;
     height: 3.438em;
 }
+
+/* tablet */
+/* start: 768? */
+@media (min-width: 765px) and (max-width: 1023px) {
+    .header {
+        margin-bottom: 2em;
+    }
+    .back {
+        margin-right: 7.5em;
+    }
+    .bar-logo-name-header {
+        width: 17em;
+        height: 10em;
+    }
+}
