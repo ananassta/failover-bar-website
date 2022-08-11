@@ -18,7 +18,7 @@ function BeerListItem(props) {
   }
   return (
     <div className="BeerListBox">
-      <img alt="Beer" src={beerImage} className="BeerListImage" />
+      <img alt="Beer" src={beerImage} className="BeerListImage" style={{ opacity: inStock ? '1' : '0.5' }} />
       <div className="BeerShortDescBox">
         <ButtonBeerName
           name={beer.name}
@@ -26,7 +26,7 @@ function BeerListItem(props) {
           data={beer.id}
           value={inStock}
         />
-        <p className="BeerShortDesc">
+        <p className="BeerShortDesc" style={{ opacity: inStock ? '1' : '0.5' }}>
           {`${beer.manufacturer} (${beer.country}) | ${beer.alco} | ${beer.strength}`}
         </p>
       </div>

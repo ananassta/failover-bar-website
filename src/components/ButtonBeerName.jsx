@@ -6,6 +6,8 @@ import './style.css';
 function ButtonBeerName(props) {
   const buttonProps = props;
   const styleLink = {
+    pointerEvents: buttonProps.value === false ? 'none' : '',
+    opacity: buttonProps.value === false ? '0.5' : '1',
     backgroundColor: 'none',
     borderRadius: '6.25em',
     marginTop: '-1em',
