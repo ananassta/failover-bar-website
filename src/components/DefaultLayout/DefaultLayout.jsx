@@ -8,10 +8,13 @@ export default function DefaultLayout({
   backData,
   children,
 }) {
+  const beerItemStyle = backData ? { gridTemplateColumns: 'repeat(1,1fr)' } : {};
   return (
     <div className={styles['default-layout']}>
       <Header backButtonName={backButtonName} backLinkName={backLinkName} backData={backData} />
-      {children}
+      <div className={styles['menu-layout']} style={beerItemStyle}>
+        {children}
+      </div>
     </div>
   );
 }

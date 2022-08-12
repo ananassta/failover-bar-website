@@ -5,6 +5,8 @@ import './style.css';
 
 function ButtonBeerName(props) {
   const mediaQueryTablet = window.matchMedia('(min-width: 765px) and (max-width: 1023px)');
+  const mediaQueryDesktop = window.matchMedia('(min-width: 1024px)');
+  const fontSizeDesktopOrMobile = mediaQueryDesktop.matches ? '1.1em' : '0.875em';
   const buttonProps = props;
   const styleLink = {
     pointerEvents: buttonProps.value === false ? 'none' : '',
@@ -21,7 +23,7 @@ function ButtonBeerName(props) {
     // boxShadow: '4px 8px 24px rgba(16, 16, 16, 0.25)',
     color: '#D75C36',
     fontFamily: 'Urbanist',
-    fontSize: mediaQueryTablet.matches ? '1.85em' : '0.875em',
+    fontSize: mediaQueryTablet.matches ? '1.85em' : fontSizeDesktopOrMobile,
     letterSpacing: '0.013em',
     textTransform: 'none',
     border: '0',

@@ -32,3 +32,20 @@
         height: 10em;
     }
 }
+
+/* desktop */
+@media (min-width: 1024px) {
+    .header {
+        margin-top: -1em;
+    }
+    .back {
+        position: absolute;
+        left: 12em;
+        top: 3.5em;
+    }
+    .bar-logo-name-header {
+        width: 13em;
+        height: 6em;
+    }
+
+}
