@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Button from '@mui/material/Button';
 import './style.css';
 
-function ButtonBeerName(props) {
+function ButtonBeerName({ buttonProps }) {
   const mediaQueryTablet = window.matchMedia('(min-width: 765px) and (max-width: 1023px)');
   const mediaQueryDesktop = window.matchMedia('(min-width: 1024px)');
   const fontSizeDesktopOrMobile = mediaQueryDesktop.matches ? '1.1em' : '0.875em';
-  const buttonProps = props;
   const styleLink = {
     pointerEvents: buttonProps.value === false ? 'none' : '',
     opacity: buttonProps.value === false ? '0.5' : '1',
@@ -39,9 +37,6 @@ function ButtonBeerName(props) {
     // },
     textDecoration: 'none',
   };
-  //   const styleText = {
-  //     textDecoration: 'none',
-  //   };
   const handleMouseEnter = (e) => {
     e.target.style.color = '#757575';
     e.target.style.transition = 'color 250ms';
@@ -52,14 +47,12 @@ function ButtonBeerName(props) {
   return (
     <Link
       to={buttonProps.linkName}
-      state={{ data: buttonProps.data }}
+      state={{ beerId: buttonProps.data }}
       style={styleLink}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* <Button size="medium" sx={styleButton}> */}
       {buttonProps.name}
-      {/* </Button> */}
     </Link>
   );
 }

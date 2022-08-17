@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './style.css';
 
-function ButtonMenu(props) {
+function ButtonMenu({ buttonProps }) {
   const mediaQuery = window.matchMedia('(min-width: 765px) and (max-width: 1023px)');
-  const buttonProps = props;
   const styleButton = {
     backgroundColor: '#D75C36',
     borderRadius: '6.25em',
@@ -43,7 +42,6 @@ function ButtonMenu(props) {
         {buttonProps.name}
       </Button>
     </Link>
-    // add onclick for choosed type of beer
   );
 }
 

@@ -5,26 +5,19 @@ import beerSign from '../images/empty-beer-photo.svg';
 function BeerListItem(props) {
   const beerProps = props;
   const beer = beerProps.beer;
-  let beerImage = null;
-  let inStock = true;
-  if (!beer.image) {
-    beerImage = beerSign;
-  } else {
-    beerImage = beer.image;
-  }
-  if (!(beer.amount > 0)) {
-    inStock = false;
-    // add disabled links
-  }
+  const beerImage = beer.image || beerSign;
+  const inStock = beer.amount > 0;
   return (
     <div className="BeerListBox">
       <img alt="Beer" src={beerImage} className="BeerListImage" style={{ opacity: inStock ? '1' : '0.5' }} />
       <div className="BeerShortDescBox">
         <ButtonBeerName
-          name={beer.name}
-          linkName={`${beer.id}`}
-          data={beer.id}
-          value={inStock}
+          buttonProps={{
+            name: beer.name,
+            linkName: beer.id,
+            data: beer.id,
+            value: inStock,
+          }}
         />
         <p className="BeerShortDesc" style={{ opacity: inStock ? '1' : '0.5' }}>
           {`${beer.manufacturer} (${beer.country}) | ${beer.alco} | ${beer.strength}`}

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import './style.css';
-// import { IconButton } from '@mui/material';
 
-function ButtonBack(props) {
+function ButtonBack({ name }) {
+  const navigate = useNavigate();
+  const onBack = () => navigate(-1);
   const mediaQueryTablet = window.matchMedia('(min-width: 765px) and (max-width: 1023px)');
-  const buttonProps = props;
   const styleButton = {
     backgroundColor: 'none',
     borderRadius: '6.25em',
@@ -39,21 +39,10 @@ function ButtonBack(props) {
       backgroundColor: 'none',
     },
   };
-  const styleText = {
-    textDecoration: 'none',
-    // width: '91px',
-    // height: '40px',
-  };
   return (
-    <Link to={buttonProps.linkName} state={{ data: buttonProps.data }} style={styleText}>
-      <Button startIcon={<ArrowBackIcon />} sx={styleButton}>
-        {/* <Button variant="outlined" size="medium" sx={styleButton}> */}
-        {/* <IconButton color="white" aria-label="back"> */}
-        {/* <ArrowBackIcon /> */}
-        {buttonProps.name}
-        {/* </IconButton> */}
-      </Button>
-    </Link>
+    <Button startIcon={<ArrowBackIcon />} sx={styleButton} onClick={onBack}>
+      {name || 'Назад'}
+    </Button>
   );
 }
 
