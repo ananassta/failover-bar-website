@@ -20,6 +20,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "import/prefer-default-export": "off",
         "implicit-arrow-linebreak": "off",
         "linebreak-style": "off",
         "prefer-destructuring": ["error", {

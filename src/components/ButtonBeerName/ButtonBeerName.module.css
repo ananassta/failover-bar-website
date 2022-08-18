@@ -1,0 +1,16 @@
+.link:hover {
+    transition: color 250ms;
+    color: #757575;
+}
+
+.link{
+    color:#D75C36;
+    background-color: none;
+    border-radius: 6.25em;
+    text-align: left;
+    font-family: 'Urbanist';
+    letter-spacing: 0.013em;
+    text-transform: none;
+    border: none;
+    text-decoration: none;
+}

@@ -16,14 +16,8 @@
 
 @media (min-width: 1024px) {
     .menu-layout {
-        /* display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center; */
         display: grid;
         grid-template-columns: repeat(3,1fr);
         padding: 0em 7.8em;
-        /* width: 100%; */
     }
-    
 }

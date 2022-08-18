@@ -7,18 +7,12 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import beerSign from './images/empty-beer-photo.svg';
-import { getAllBeerInformation } from './api';
+import { getAllBeerInformation, getFullInfoKeys } from './api';
 
 export default function Beer() {
   const location = useLocation();
   const beerInformation = getAllBeerInformation(location.state.beerId);
-  const shortInfo = ['id', 'name', 'image', 'description', 'price', 'amount'];
-  const fullInfo = [];
-  Object.keys(beerInformation).forEach((keyName) => {
-    if (!shortInfo.includes(keyName)) {
-      fullInfo.push(keyName);
-    }
-  });
+  const fullInfo = getFullInfoKeys(location.state.beerId);
   const shortDesc = `${beerInformation.manufacturer || '-'} (${beerInformation.country || '-'}) | ${beerInformation.alco ?? '-'} | ${beerInformation.strength ?? '-'}`;
   const beerImage = beerInformation.image || beerSign;
   return (

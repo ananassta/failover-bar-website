@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { getAllBeersForCategory } from './api';
-import BeerListItem from './components/BeerListItem';
+import BeerListItem from './components/BeerListItem/BeerListItem';
 
 export default function BeerList() {
   const location = useLocation();

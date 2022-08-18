@@ -1,10 +1,8 @@
 import React from 'react';
-import ButtonBeerName from './ButtonBeerName';
-import beerSign from '../images/empty-beer-photo.svg';
+import ButtonBeerName from '../ButtonBeerName/ButtonBeerName';
+import beerSign from '../../images/empty-beer-photo.svg';
 
-function BeerListItem(props) {
-  const beerProps = props;
-  const beer = beerProps.beer;
+function BeerListItem({ beer }) {
   const beerImage = beer.image || beerSign;
   const inStock = beer.amount > 0;
   return (

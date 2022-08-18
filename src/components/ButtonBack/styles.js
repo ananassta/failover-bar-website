@@ -1,14 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import './style.css';
-
-function ButtonBack({ name }) {
-  const navigate = useNavigate();
-  const onBack = () => navigate(-1);
-  const mediaQueryTablet = window.matchMedia('(min-width: 765px) and (max-width: 1023px)');
-  const styleButton = {
+export function getStyles(mediaQueryTablet) {
+  return {
     backgroundColor: 'none',
     borderRadius: '6.25em',
     marginTop: mediaQueryTablet.matches ? '2.55em' : '1em',
@@ -39,11 +30,4 @@ function ButtonBack({ name }) {
       backgroundColor: 'none',
     },
   };
-  return (
-    <Button startIcon={<ArrowBackIcon />} sx={styleButton} onClick={onBack}>
-      {name || 'Назад'}
-    </Button>
-  );
 }
-
-export default ButtonBack;

@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonBack from '../ButtonBack';
+import ButtonBack from '../ButtonBack/ButtonBack';
 import styles from './styles.module.css';
 import logoName from '../../images/header.svg';
 

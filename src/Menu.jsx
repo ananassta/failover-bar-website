@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonMenu from './components/ButtonMenu';
+import ButtonMenu from './components/ButtonMenu/ButtonMenu';
 import { getAllCategories } from './api';
 
 export default function Menu() {
@@ -13,7 +13,7 @@ export default function Menu() {
             name: categ,
             data: categ,
           }}
-          key={categ.id}
+          key={categ}
         />
       ))}
     </>
