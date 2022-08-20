@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App';
-import Menu from './Menu';
-import BeerList from './BeerList';
-import Beer from './Beer';
-import DefaultLayout from './components/DefaultLayout/DefaultLayout';
+import App from '../App/App';
+import Menu from '../Menu/Menu';
+import BeerList from '../BeerList/BeerList';
+import Beer from '../Beer/Beer';
+import DefaultLayout from '../../components/DefaultLayout/DefaultLayout';
 
 // eslint-disable-next-line import/prefer-default-export
 export function Router() {

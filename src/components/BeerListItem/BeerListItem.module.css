@@ -1,0 +1,91 @@
+.beer-list-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5em;
+  gap: 1.25em;
+  width: 22.875em;
+  height: 6.5em;
+  left: 0.75em;
+  top: 10em;
+  border-radius: 2em;
+}
+
+.beer-list-image {
+  width: 5.063em;
+  height: 5.125em;
+}
+
+.beer-short-desc-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0em;
+  gap: 0.5em;
+  width: 13.563em;
+  height: 4.063em;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.beer-short-desc {
+  width: 13.563em;
+  height: 1.063em;
+  margin: 0em;
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  line-height: 140%;
+  letter-spacing: 0.025em;
+  color: #757575;
+  text-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* tablet */
+/* start: 768? */
+@media (min-width: 765px) and (max-width: 1023px) {
+  .beer-list-box {
+    gap: 2em;
+    width: 31em;
+    height: 12.5em;
+  }
+  .beer-short-desc-box {
+    padding: 0em;
+    gap: 0.5em;
+    width: 14em;
+    height: 10em;
+  }
+  .beer-short-desc {
+    font-size: 1.35em;
+  }
+  .beer-list-image {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .beer-list-box {
+    gap: 0em;
+  }
+  .beer-short-desc-box {
+    padding: 0em;
+    gap: 0.5em;
+  }
+  .beer-short-desc {
+    font-size: 0.9em;
+  }
+  .beer-list-image {
+    width: 7em;
+    height: 7em;
+  }
+}

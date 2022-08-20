@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './components/style.css';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
-import beerSign from './images/empty-beer-photo.svg';
-import { getAllBeerInformation, getFullInfoKeys } from './api';
+import beerSign from '../../images/empty-beer-photo.svg';
+import { getAllBeerInformation, getFullInfoKeys } from '../../lib';
+import styles from './Beer.module.css';
 
 export default function Beer() {
   const location = useLocation();
@@ -16,23 +16,23 @@ export default function Beer() {
   const shortDesc = `${beerInformation.manufacturer || '-'} (${beerInformation.country || '-'}) | ${beerInformation.alco ?? '-'} | ${beerInformation.strength ?? '-'}`;
   const beerImage = beerInformation.image || beerSign;
   return (
-    <div className="BeerItemBoxFull">
-      <div className="BeerItemBox">
-        <img src={beerImage} alt="Beer" className="BeerImage" style={{ width: '9.188em', height: '10.813em' }} />
-        <div className="BeerItemShortDecs">
-          <p className="BeerItemName">
+    <div className={styles['beer-item-box-full']}>
+      <div className={styles['beer-item-box']}>
+        <img src={beerImage} alt="Beer" className={styles['beer-image']} style={{ width: '9.188em', height: '10.813em' }} />
+        <div className={styles['beer-item-short-desc']}>
+          <p className={styles['beer-item-name']}>
             {`${beerInformation.name}`}
           </p>
-          <p className="BeerItemShortDescText">
+          <p className={styles['beer-item-short-desc-text']}>
             {`${shortDesc}`}
           </p>
         </div>
       </div>
-      <p className="BeerDescText">
+      <p className={styles['beer-desc-text']}>
         {`${beerInformation.description}`}
       </p>
-      <div className="PriceDiv">
-        <p className="Price">
+      <div className={styles['price-div']}>
+        <p className={styles.price}>
           {`${beerInformation.price}₽`}
         </p>
       </div>

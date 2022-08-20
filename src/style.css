@@ -1,0 +1,107 @@
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #3c3c3b;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway'),
+    url(./fonts/Raleway-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Urbanist'),
+    url(./fonts/Urbanist/Urbanist-VariableFont_wght.ttf) format('truetype');
+}
+
+.MuiTableContainer-root.css-rorn0c-MuiTableContainer-root {
+  width: 82.5%;
+  margin: 1.25em;
+  margin-top: 0em;
+  /* border-collapse: none; */
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.938em;
+  line-height: 1.25em;
+  letter-spacing: 0.025em;
+  color: #ededed;
+  border-bottom: 0.063em solid rgba(117, 117, 117, 1);
+  /* border-top: none; */
+}
+
+tr.MuiTableRow-root:last-child
+  td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
+  border-bottom: 0;
+}
+
+span.MuiButton-startIcon.MuiButton-iconSizeMedium {
+  margin-right: 0;
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root {
+  background-color: rgba(25, 118, 210, 0.0);
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root:hover {
+  color: #757575;
+}
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+  font-size: 1.25em;
+  stroke: #EDEDED;
+  stroke-width: 1;
+}
+
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root:hover svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+  stroke: #757575;
+}
+
+/* ------------------ Media queries ------------------ */
+
+/* tablet */
+/* start: 768? */
+@media (min-width: 765px) and (max-width: 1023px) {
+  html {
+    height: 100%;
+  }
+  .MuiTableContainer-root.css-rorn0c-MuiTableContainer-root {
+    width: 85%;
+  }
+  td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
+    font-size: 1.15em;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  html {
+    height: 100%;
+  } 
+  #root {
+    height: 100%;
+  }  
+  .MuiTableContainer-root.css-rorn0c-MuiTableContainer-root {
+    width: 90.5%;
+  }
+  td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
+    font-size: 1.15em;
+  }
+}

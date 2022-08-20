@@ -1,6 +1,6 @@
 import React from 'react';
-import ButtonMenu from './components/ButtonMenu/ButtonMenu';
-import { getAllCategories } from './api';
+import ButtonMenu from '../../components/ButtonMenu/ButtonMenu';
+import { getAllCategories } from '../../lib';
 
 export default function Menu() {
   const allCategories = getAllCategories();

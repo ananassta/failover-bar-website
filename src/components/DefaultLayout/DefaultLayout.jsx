@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import { useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
-import styles from './styles.module.css';
+import styles from './DefaultLayout.module.css';
 
 export default function DefaultLayout() {
   const location = useLocation();

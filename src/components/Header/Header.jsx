@@ -1,6 +1,6 @@
 import React from 'react';
 import ButtonBack from '../ButtonBack/ButtonBack';
-import styles from './styles.module.css';
+import styles from './Header.module.css';
 import logoName from '../../images/header.svg';
 
 export default function Header({ name }) {
