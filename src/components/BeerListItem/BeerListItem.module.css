@@ -10,11 +10,16 @@
   left: 0.75em;
   top: 10em;
   border-radius: 2em;
+
+  transition: 250ms;
 }
 
 .beer-list-image {
   width: 5.063em;
   height: 5.125em;
+
+  /* opacity: 1em;
+  transition: 250ms; */
 }
 
 .beer-short-desc-box {
@@ -49,6 +54,47 @@
   flex-grow: 0;
 }
 
+.beer-list-name {
+  color: #d75c36;
+  background-color: none;
+  border-radius: 6.25em;
+  text-align: left;
+  font-family: 'Urbanist';
+  letter-spacing: 0.013em;
+  text-transform: none;
+  border: none;
+
+  margin-top: -1em;
+  margin-bottom: 0em;
+  width: 13.563em;
+  font-size: 0.875em;
+
+  /* transition: 250ms; */
+}
+
+.beer-list-box:hover {
+  transition: 250ms;
+  opacity: 0.5;
+}
+.beer-list-box:active {
+  opacity: 0.9;
+}
+
+/* или вот так через цвет все-таки */
+
+/* .beer-list-box:hover .beer-list-name{
+  transition: color 250ms;
+  color: #757575;
+}
+.beer-list-box:hover .beer-short-desc{
+  transition: color 250ms;
+  color: #5b5a5a;
+}
+.beer-list-box:hover .beer-list-image {
+  transition: 250ms;
+  opacity: 0.5;
+} */
+
 /* tablet */
 /* start: 768? */
 @media (min-width: 765px) and (max-width: 1023px) {
@@ -70,6 +116,12 @@
     width: 10em;
     height: 10em;
   }
+  .beer-list-name {
+    margin-top: -0.25em;
+    margin-bottom: 0.5em;
+    width: 20em;
+    font-size: 1.85em;
+  }
 }
 
 /* desktop */
@@ -87,5 +139,8 @@
   .beer-list-image {
     width: 7em;
     height: 7em;
+  }
+  .beer-list-name {
+    font-size: 1.1em;
   }
 }
