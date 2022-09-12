@@ -1,0 +1,143 @@
+.beer-item-box-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beer-item-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5em;
+  padding-top: 0em;
+  padding-right: 2.5em;
+  gap: 1.25em;
+}
+
+.beer-item-short-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0em;
+  /* gap: 0.5em; */
+  /* flex: none; */
+  order: 1;
+  flex-grow: 1;
+}
+
+.beer-item-name {
+  font-weight: 600;
+  font-size: 1.35em;
+  line-height: 140%;
+  letter-spacing: 0.025em;
+  color: #d75c36;
+  flex: none;
+  margin-bottom: 0.5em;
+}
+
+.beer-item-short-desc-text {
+  font-weight: 550;
+  font-size: 0.938em;
+  line-height: 140%;
+  letter-spacing: 0.025em;
+  color: #757575;
+  text-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  flex: none;
+  margin-top: 0.5em;
+}
+
+.beer-desc-text {
+  width: 19.125em;
+  margin: 0 2em;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.4em;
+  text-align: justify;
+  letter-spacing: 0.025em;
+  /* letter-spacing: 0.05em; */
+  color: #ededed;
+}
+
+.price-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.price {
+  margin: 0;
+  margin-bottom: 0.5em;
+  margin-right: 1.5em;
+  font-weight: 600;
+  font-size: 1.563em;
+  line-height: 140%;
+  text-align: justify;
+  letter-spacing: 0.025em;
+  color: #d75c36;
+}
+
+.beer-image {
+  width: 9.188em;
+  height: 10.813em;
+}
+
+/* tablet */
+/* start: 768? */
+@media (min-width: 765px) and (max-width: 1023px) {
+  .beer-image {
+    width: 12em;
+    height: 9em;
+  }
+  .beer-item-name {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: -0.25em;
+  }
+  .beer-item-short-desc-text {
+    font-size: 1.5em;
+  }
+  .beer-desc-text {
+    width: 20.5em;
+    margin: 0.5em 2em;
+    font-size: 1.5em;
+  }
+  .price {
+    margin-bottom: 0.2em;
+    margin-right: 1.75em;
+    font-size: 2em;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .beer-image {
+    width: 5em;
+    height: 5em;
+  }
+  .beer-item-box {
+    width: 65em;
+  }
+  .beer-item-name {
+    font-size: 1.6em;
+    margin-top: 0.5em;
+    margin-bottom: -0.25em;
+  }
+  .beer-item-short-desc-text {
+    font-size: 1.2em;
+  }
+  .beer-desc-text {
+    width: 40em;
+    margin: 0.5em 2em;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+  .price {
+    position: absolute;
+    top: 7em;
+    left: 31.5em;
+    font-size: 2em;
+  }
+}

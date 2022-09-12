@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2.375em;
+    width: 100%;
+}
+
+.back {
+    /* float: left; */
+    /* left: 2.5em;
+    position: absolute; */
+    margin-right: 3em;
+}
+
+.bar-logo-name-header {
+    width: 10.125em;
+    height: 3.438em;
+}
+
+/* tablet */
+/* start: 768? */
+@media (min-width: 765px) and (max-width: 1023px) {
+    .header {
+        margin-bottom: 2em;
+    }
+    .back {
+        margin-right: 7.5em;
+    }
+    .bar-logo-name-header {
+        width: 17em;
+        height: 10em;
+    }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+    .header {
+        margin-top: -1em;
+    }
+    .back {
+        position: absolute;
+        left: 12em;
+        top: 3.5em;
+    }
+    .bar-logo-name-header {
+        width: 13em;
+        height: 6em;
+    }
+
+}
