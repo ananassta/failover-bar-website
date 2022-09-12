@@ -27,8 +27,7 @@
 }
 
 .beer-item-name {
-  font-family: 'Urbanist';
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.35em;
   line-height: 140%;
   letter-spacing: 0.025em;
@@ -38,9 +37,7 @@
 }
 
 .beer-item-short-desc-text {
-  font-family: 'Urbanist';
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 550;
   font-size: 0.938em;
   line-height: 140%;
   letter-spacing: 0.025em;
@@ -53,8 +50,6 @@
 .beer-desc-text {
   width: 19.125em;
   margin: 0 2em;
-  font-family: 'Urbanist';
-  font-style: normal;
   font-weight: 500;
   font-size: 1em;
   line-height: 1.4em;
@@ -76,9 +71,7 @@
   margin: 0;
   margin-bottom: 0.5em;
   margin-right: 1.5em;
-  font-family: 'Urbanist';
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.563em;
   line-height: 140%;
   text-align: justify;

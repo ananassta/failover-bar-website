@@ -3,6 +3,7 @@ import beerList from '../beer/beerList.json';
 export type BeerType = {
   id: string,
   name: string,
+  size: string,
   category: string,
   alco: string,
   strength: string,

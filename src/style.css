@@ -10,22 +10,14 @@ body {
   width: 100%;
   height: 100%;
   cursor: default;
+  font-family: 'Raleway', sans-serif;
 }
 
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
-  font-weight: 700;
   src: local('Raleway'),
     url(./fonts/Raleway-VariableFont_wght.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Urbanist';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Urbanist'),
-    url(./fonts/Urbanist/Urbanist-VariableFont_wght.ttf) format('truetype');
 }
 
 .MuiTableContainer-root.css-rorn0c-MuiTableContainer-root {
@@ -36,9 +28,9 @@ body {
 }
 
 td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium {
-  font-family: 'Urbanist';
+  font-family: 'Raleway';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.938em;
   line-height: 1.25em;
   letter-spacing: 0.025em;

@@ -8,7 +8,7 @@ export function getStyles(mediaQuery: boolean) {
     gap: '0.625em',
     boxShadow: '0.25em 0.5em 1.5em rgba(16, 16, 16, 0.25)',
     color: '#EDEDED',
-    fontFamily: 'Raleway',
+    fontWeight: '700',
     fontSize: mediaQuery ? '1.5em' : '1em',
     letterSpacing: '0.013em',
     textTransform: 'none',

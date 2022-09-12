@@ -40,8 +40,6 @@
   width: 13.563em;
   height: 1.063em;
   margin: 0em;
-  font-family: 'Urbanist';
-  font-style: normal;
   font-weight: 400;
   font-size: 0.75em;
   line-height: 140%;
@@ -59,7 +57,7 @@
   background-color: none;
   border-radius: 6.25em;
   text-align: left;
-  font-family: 'Urbanist';
+  font-weight: 500;
   letter-spacing: 0.013em;
   text-transform: none;
   border: none;

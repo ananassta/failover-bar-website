@@ -11,7 +11,7 @@ export function getStyles(mediaQueryTablet: boolean) {
     gap: mediaQueryTablet ? '0.4em' : '0.313em',
     // boxShadow: '4px 8px 24px rgba(16, 16, 16, 0.25)',
     color: '#EDEDED',
-    fontFamily: 'Raleway',
+    fontWeight: '700',
     fontSize: mediaQueryTablet ? '1.5em' : '1em',
     letterSpacing: '0.013em',
     textTransform: 'none',
