@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import ButtonMenu from '../../components/ButtonMenu/ButtonMenu';
 import logoName from '../../images/logo-name.svg';
 import logoCircle from '../../images/circle-logo.svg';

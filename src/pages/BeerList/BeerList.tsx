@@ -1,19 +1,21 @@
-import React from 'react';
+import * as React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { getAllBeersForCategory } from '../../lib';
+import { getAllBeersForCategory, LocationStateType, BeerType } from '../../lib/index';
 import BeerListItem from '../../components/BeerListItem/BeerListItem';
 import { getStyles } from './styles';
 
 export default function BeerList() {
   const location = useLocation();
-  const allBeers = getAllBeersForCategory(location.state.data);
+  const locationState: LocationStateType = location.state;
+  const allBeers = getAllBeersForCategory(locationState.data);
   return (
     <>
-      {allBeers.map((beer) => (
+      {allBeers.map((beer: BeerType) => (
         <Link
           to={beer.id}
           state={{ beerId: beer.id }}
           style={getStyles(beer.amount > 0)}
+          key={beer.id}
         >
           <BeerListItem beer={beer} key={beer.id} />
         </Link>

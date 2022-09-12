@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import ButtonMenu from '../../components/ButtonMenu/ButtonMenu';
 import { getAllCategories } from '../../lib';
 
@@ -6,7 +6,7 @@ export default function Menu() {
   const allCategories = getAllCategories();
   return (
     <>
-      {allCategories.map((categ) => (
+      {allCategories.map((categ: string) => (
         <ButtonMenu
           buttonProps={{
             linkName: categ.toLowerCase(),

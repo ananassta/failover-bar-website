@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { Router } from './pages/Router/Router';
 import './style.css';

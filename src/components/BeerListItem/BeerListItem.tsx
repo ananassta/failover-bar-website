@@ -1,8 +1,13 @@
-import React from 'react';
+import * as React from 'react';
+import { BeerType } from '../../lib/index';
 import beerSign from '../../images/empty-beer-photo.svg';
 import styles from './BeerListItem.module.css';
 
-function BeerListItem({ beer }) {
+type BeerListItemProps = {
+  beer: BeerType
+}
+
+function BeerListItem({ beer }: BeerListItemProps) {
   const beerImage = beer.image || beerSign;
   return (
     <div className={styles['beer-list-box']}>

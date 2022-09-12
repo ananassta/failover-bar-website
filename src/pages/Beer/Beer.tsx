@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -6,13 +6,14 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import beerSign from '../../images/empty-beer-photo.svg';
-import { getAllBeerInformation, getFullInfoKeys } from '../../lib';
+import { getAllBeerInformation, getFullInfoKeys, LocationStateType } from '../../lib';
 import styles from './Beer.module.css';
 
 export default function Beer() {
   const location = useLocation();
-  const beerInformation = getAllBeerInformation(location.state.beerId);
-  const fullInfo = getFullInfoKeys(location.state.beerId);
+  const locationState: LocationStateType = location.state;
+  const beerInformation = getAllBeerInformation(locationState.beerId);
+  const fullInfo = getFullInfoKeys(locationState.beerId);
   const shortDesc = `${beerInformation.manufacturer || '-'} (${beerInformation.country || '-'}) | ${beerInformation.alco ?? '-'} | ${beerInformation.strength ?? '-'}`;
   const beerImage = beerInformation.image || beerSign;
   return (
